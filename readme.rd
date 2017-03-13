@@ -1,6 +1,17 @@
 Java coding test
 
-The challenge is to build a simple version of a 'hangman' game as a web-app (look & feel is not important). Our focus is on the server-side, but the app needs a client side to play the game (any browser tech as long as it's easy to install&run). The app should keep the current game state persistent across server and browser re-starts. The app could be used by many users at the same time. The app build process can be any technology, though we'd prefer 'gradle', and could produce a war file that can be deployed in a tomcat or a jar for a standalone JVM server. 
+The challenge is to build a simple version of a 'hangman' game as a web-app (look & feel is not important). Our focus is on the server-side, but the app needs a client side to play the game (any browser tech as long as it's easy to install&run). The app should keep the current game state persistent across server and browser re-starts. The app could be used by many users at the same time. The app build process can be any technology, though we'd prefer 'gradle', and could produce a war file that can be deployed in a tomcat or a jar for a standalone JVM server.
+
+
+
+RESTful web service done on base of Baundry-Controler-Entity design pattern. 
+Tools:
+NetBeans IDE 8.2
+jdk1.8.0_121
+wildfly-10.1.0.Final
+
+For testing I used:
+restclient-ui-fat-3.6.1.jar
 
 Server side Rest methods:
 1. GET /HangmanWS/resources/game - gives all the games in Json format

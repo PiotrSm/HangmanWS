@@ -29,7 +29,7 @@ public class Game {
 
     private int maxTries = 6;
     private int currentTry = 0;
-    private boolean gameOver=false,won=false;
+    private boolean gameOver = false, won = false;
 
     public Game(String mysteryWord, StringBuilder currentGuess) {
         this.mysteryWord = mysteryWord;
@@ -38,7 +38,12 @@ public class Game {
 
     public Game() {
     }
-
+    
+    /**
+     * Method updating Game object according to provided guessing letter
+     * @param char letter
+     * @return Geme object
+     */
     public Game updateGuessLetter(char letter) {
         boolean isItAGoodGuess = false;
         if (this.mysteryWord.indexOf(letter) == -1) {
@@ -53,8 +58,8 @@ public class Game {
             }
         }
         won = mysteryWord.equals(currentGuess);
-        if(won || this.currentTry==this.maxTries){
-            this.gameOver=true;
+        if (won || this.currentTry == this.maxTries) {
+            this.gameOver = true;
         }
         return this;
     }
