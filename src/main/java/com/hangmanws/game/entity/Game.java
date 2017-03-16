@@ -45,6 +45,7 @@ public class Game {
      * @return Geme object
      */
     public Game updateGuessLetter(char letter) {
+        System.out.println("====updateGuessLetter");
         boolean isItAGoodGuess = false;
         if (this.mysteryWord.indexOf(letter) == -1) {
             currentTry++;
@@ -57,11 +58,37 @@ public class Game {
                 }
             }
         }
-        won = mysteryWord.equals(currentGuess);
+        
+        won = mysteryWord.equals(currentGuess.toString());
         if (won || this.currentTry == this.maxTries) {
             this.gameOver = true;
         }
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" + "game_id=" + game_id + ", mysteryWord=" + mysteryWord + ", currentGuess=" + currentGuess + ", previousGuesses=" + previousGuesses + ", maxTries=" + maxTries + ", currentTry=" + currentTry + ", gameOver=" + gameOver + ", won=" + won + '}';
+    }
+
+    public long getGame_id() {
+        return game_id;
+    }
+
+    public String getMysteryWord() {
+        return mysteryWord;
+    }
+
+    public StringBuilder getCurrentGuess() {
+        return currentGuess;
+    }
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
+    public boolean isWon() {
+        return won;
     }
 
 }

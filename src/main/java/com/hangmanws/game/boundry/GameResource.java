@@ -41,7 +41,7 @@ public class GameResource {
     /**
      * Provides data of the client's guess
      * http://localhost:8080/HangmanWS/resources/game przyk³adowe dane:
-     * {"game_id":"0","letter":"a"}
+     * {"game_id":"1","letter":"a"}
      *
      * @param incomingData
      * @return updated Game

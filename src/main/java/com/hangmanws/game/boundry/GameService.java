@@ -15,7 +15,7 @@ import javax.inject.Inject;
 public class GameService {
 
     Random random = new Random();
-    String[] guesses = {"plum", "banana", "apple", "orange", "strawberry"};
+    String[] guesses = {"plum", "banana", "apple", "orange", "strawberry", "butter","bread","shop"};
 
     @Inject
     GameControler gc;
