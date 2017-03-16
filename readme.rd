@@ -8,7 +8,8 @@ RESTful web service done on base of Baundry-Controler-Entity design pattern.
 Tools:
 NetBeans IDE 8.2
 jdk1.8.0_121
-wildfly-10.1.0.Final
+wildfly-10.1.0.
+Maven
 
 For testing I used:
 restclient-ui-fat-3.6.1.jar
@@ -17,3 +18,5 @@ Server side Rest methods:
 1. GET /HangmanWS/resources/game - gives all the games in Json format
 2. GET /HangmanWS/resources/game/newGame - creates new Game with random word, gives it id and returns the new Game in Json format
 3. POST /HangmanWS/resources/game with data in Json format e.g. {"game_id":"1","letter":"h"} make guess of the letter in the game
+
+Client application consuming the web service is in project HangmanTestClient.
